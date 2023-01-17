@@ -15,7 +15,9 @@ class Product(models.Model):
 
     name = models.CharField(max_length=200)
     description = models.CharField(max_length=3000, default=None, null=True)
+    countryOrigin = models.CharField(max_length=100, default=None, null=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    price = models.DecimalField(max_digits=10, decimal_places=2, null=True)
 
     def __str__(self):
 

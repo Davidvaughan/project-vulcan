@@ -1,0 +1,13 @@
+{% extends "shop/_base.html" %}
+
+{% block content %}
+
+  <div>
+  {% for data in products %}
+
+    <a href=/shop/product/{{ data.id }}>{{ data.name }}</a>
+
+  {% endfor %}
+  </div>
+
+{% endblock %}
